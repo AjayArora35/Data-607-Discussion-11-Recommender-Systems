@@ -1,0 +1,41 @@
+---
+title: 'Data 607 Discussion 11: Recommender Systems'
+author: "Ajay Arora"
+date: "October 28, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+
+#Food Recommender Systems
+
+While many recommender systems exist for recommending music, movies, books, etc., recently they have been applied to food as well.  For example, RecipeKey is a food recommender system that filters recipes on the basis of considering favorite ingredients, existing food allergies, and item descriptions (e.g., meal type, cuisine, preparation time, etc.) chosen by users.  
+
+###Who are the target users?
+
+There are two types of food recommender systems. The first type (type 1) recommends healthier recipes or food items which are most similar to the ones the user liked in the past. The second type of recommender system (type 2) only recommends to users those items which have been identified beforehand by health care providers.
+
+###What are there key goals?
+
+"In relation to the food consumption these days, it is noticeable that there has been an increase of lifestyle-related illnesses, such as diabetes and obesity, which are the cause of many chronic diseases (Robertson 2004). This problem can be improved by applying appropriate dietary (Knowler et al. 2002). In this context, food recommender systems are also investigated as a potential means to aid people nourish themselves more healthily (Elsweiler et al. 2015). It makes sense to utilize food recommender systems as a part of a strategy for changing eating behaviour of users. In this case, food recommender systems not only learn users' preferences for ingredients and food styles, but also select healthy food by taking into account health problems, nutritional needs, and previous eating behaviors."
+
+###How can you help them accomplish those goals?
+
+One of many ways is to improve Recommender Systems accuracy.  In (type 1 -- Considering user preferences), learning user tastes is recognized as a crucial pre-requisite step in order to suggest dishes that users will like. 
+
+The authors use TF-IDF (Term Frequency-Inverse Document Frequency) term extraction method for creating the user profile and apply some computations for identifying the similarity between a recipe and the user profile. In addition, healthy and standard food databases, which have been extracted from the United States Department of Agriculture (USDA), are incorporated into the knowledge base. The knowledge base is a domain ontology consisting of classes, relationships, and instances of classes. For getting a recommendation, each user manually rates the food items of a specific category (e.g., fruits, vegetables, meat, etc.) as relevant or non-relevant for his/her interest. After that, the recommender will compute the similarity between the food items and the previously computed user profile. If the similarity value is higher than a predefined threshold, the food item is recommended, otherwise it gets ignored. 
+
+In (type 2: Considering nutritional needs of users), a simple recommendation scenario showing how menu items can be recommended to users on the basis of considering their nutritional needs as well as health problems. In this context, a user enters some personal information (e.g., age, gender, occupation, physical activities, health problem, etc.). This information is the basis for selecting food items which best fit the user's nutritional needs. 
+
+
+###Conclusions
+Food recommender systems have a great potential in our busy lifestyles.  Nowadays, unhealthy eating habits and imbalanced nutrition increase possibilities of people having obesity and other dietary-related conditions such as diabetes, hypertension, etc. As a treatment or preventive measure, nutritionists or dietitians usually recommend regular exercises and design individualized meal plans for their patients. Unfortunately, these nutrition experts are overloaded with too many patients to manually tailor an individualized meal plan for each user. That is where food recommender systems can be used as an intelligent nutrition consultation system.
+ 
+
+###Reference: https://link.springer.com/article/10.1007/s10844-017-0469-0
